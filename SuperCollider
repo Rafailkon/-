@@ -30,8 +30,7 @@ SynthDef(\noise,{
     var sig;
 	sig = PinkNoise.ar(0.2!2);
 	sig = RLPF.ar(sig,SinOsc.kr(0.2).exprange(100,500));
-
-	Out.ar(out,sig);
+        Out.ar(out,sig);
 }).add;
 
 SynthDef(\reverb,{
