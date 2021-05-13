@@ -1,4 +1,5 @@
 # HDS
+Interactive Sound Arts Class at the Department of Audiovisual Arts of the Ionian University
 
 Εργασία Μαθήματος Ραφαήλ Κωνσταντινίδης
 
