@@ -10,7 +10,7 @@ void setup()
   size(1000, 1000, P2D);
   background(0);
   fft = new FFT(this, bands);
-  track = new SoundFile(this, "SuperC.mp3");
+  track = new SoundFile(this, "SuperC..aiff");
   track.loop();
   fft.input(track);
 }
