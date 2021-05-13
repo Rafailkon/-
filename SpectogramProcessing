@@ -1,0 +1,36 @@
+import processing.sound.*;
+SoundFile track;
+FFT fft;       
+int bands = 2048;
+float[] spectrum = new float[bands]; 
+float angle= 10;
+
+void setup()
+{
+  size(1000, 1000, P2D);
+  background(0);
+  fft = new FFT(this, bands);
+  track = new SoundFile(this, "SuperC.mp3");
+  track.loop();
+  fft.input(track);
+}
+void draw() {
+fft.analyze();
+
+  {
+    for (int i = 0; i<bands; i++)
+    {
+    spectrum[i] = sin(i*TAU/256);
+    }  
+ 
+  translate(width/2, height/2);
+  rotate(angle);
+  for (int i = 0; i<bands; i++)
+    {
+    spectrum[i] += (fft.spectrum[i]*1000 - spectrum[i]);
+    stroke(spectrum[i]*255,255);  
+    point(i,i);
+    }
+  angle += PI/(256*4)*0.15;  
+  }
+}
