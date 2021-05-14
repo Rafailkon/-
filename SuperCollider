@@ -29,7 +29,7 @@ SynthDef(\noise,{
 	arg out = 0 ;
         var sig;
 	sig = PinkNoise.ar(0.2!2);
-	sig = RLPF.ar(sig,SinOsc.kr(0.2).exprange(100,500));
+	sig = RLPF.ar(sig,LFNoise2.kr(0.2).exprange(100,500));
         Out.ar(out,sig);
 }).add;
 
