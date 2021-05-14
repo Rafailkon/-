@@ -8,7 +8,7 @@ SynthDef(\synthP, {
 	env = EnvGen.kr(Env([0,1,1,0],[atk, sus, rel],[c1,0,c2]),doneAction:2);
 	sig = Pulse.ar(freq* {LFNoise1.kr(0.5,detune).midiratio});
 	sig = BPF.ar(sig,{LFNoise1.kr(0.2).exprange(cfmin,cfmax)},
-		             {LFNoise1.kr(0.1).exprange(rqmin,rqmax)}
+		         {LFNoise1.kr(0.1).exprange(rqmin,rqmax)}
 	);
         sig = Pan2.ar(sig, pan);
 	sig = sig * env * amp;
