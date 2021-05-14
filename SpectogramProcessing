@@ -27,7 +27,7 @@ fft.analyze();
   rotate(angle);
   for (int i = 0; i<bands; i++)
     {
-    spectrum[i] += (fft.spectrum[i]*1000 - spectrum[i]);
+    spectrum[i] = fft.spectrum[i]*1000;
     stroke(spectrum[i]*255,255);  
     point(i,i);
     }
