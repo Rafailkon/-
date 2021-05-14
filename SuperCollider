@@ -10,7 +10,7 @@ SynthDef(\synthP, {
 	sig = BPF.ar(sig,{LFNoise1.kr(0.2).exprange(cfmin,cfmax)},
 		             {LFNoise1.kr(0.1).exprange(rqmin,rqmax)}
 	);
-  sig = Pan2.ar(sig, pan);
+        sig = Pan2.ar(sig, pan);
 	sig = sig * env * amp;
 	Out.ar(out, sig);
 }).add;
@@ -27,7 +27,7 @@ SynthDef(\pad,{
 
 SynthDef(\noise,{
 	arg out = 0 ;
-    var sig;
+        var sig;
 	sig = PinkNoise.ar(0.2!2);
 	sig = RLPF.ar(sig,SinOsc.kr(0.2).exprange(100,500));
         Out.ar(out,sig);
