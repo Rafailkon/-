@@ -31,6 +31,6 @@ fft.analyze();
     stroke(spectrum[i]*255,255);  
     point(i,i);
     }
-  angle += PI/(256*4)*0.15;  
+  angle += TAU/(256*4)*0.15;  
   }
 }
