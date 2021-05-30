@@ -1,13 +1,14 @@
 import processing.sound.*;
 SoundFile track;
 FFT fft;       
-int bands = 2048;
+int bands = 8192;
 float[] spectrum = new float[bands]; 
 float angle= 10;
 
 void setup()
 {
-  size(1000, 1000, P2D);
+  surface.setLocation(200,height/5);
+  size(1000, 1000);
   background(0);
   fft = new FFT(this, bands);
   track = new SoundFile(this, "SuperC.aiff");
@@ -15,16 +16,15 @@ void setup()
   fft.input(track);
 }
 void draw() {
-fft.analyze();
-
+  fft.analyze();
   translate(width/2, height/2);
   rotate(angle);
   for (int i = 0; i<bands; i++)
     {
-    spectrum[i] = fft.spectrum[i]*1000;
-    stroke(spectrum[i]*255,255);  
+    strokeWeight(3);
+    spectrum[i] = fft.spectrum[i]*25;
+    stroke(255,spectrum[i]*255);  
     point(i,i);
     }
-  angle += PI/(256*4)*0.15;  
-  }
+  angle += PI/(256*4)*0.1605; 
 }
