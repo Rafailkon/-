@@ -20,7 +20,7 @@ fft.analyze();
   {
     for (int i = 0; i<bands; i++)
     {
-    spectrum[i] = sin(i*TAU/256);
+    spectrum[i] = sin(i*PI/256);
     }  
  
   translate(width/2, height/2);
@@ -31,6 +31,6 @@ fft.analyze();
     stroke(spectrum[i]*255,255);  
     point(i,i);
     }
-  angle += TAU/(256*4)*0.15;  
+  angle += PI/(256*4)*0.15;  
   }
 }
