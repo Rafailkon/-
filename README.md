@@ -3,4 +3,4 @@ Interactive Sound Arts Class at the Department of Audiovisual Arts of the Ionian
 
 Ραφαήλ Κωνσταντινίδης
 
-Video Link :  https://1drv.ms/v/s!AjVIyz1h0tNBhkLIDxcqg5VnSngE
+Video Link :  https://1drv.ms/v/s!AjVIyz1h0tNBhkLIDxcqg5VnSngE?e=UMex2T
