@@ -3,7 +3,7 @@ SoundFile track;
 FFT fft;       
 int bands = 8192;
 float[] spectrum = new float[bands]; 
-float angle=  -QUARTER_PI*3;
+float angle= -QUARTER_PI*3;
 
 void setup()
 {
