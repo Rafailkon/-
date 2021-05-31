@@ -3,7 +3,7 @@ SoundFile track;
 FFT fft;       
 int bands = 8192;
 float[] spectrum = new float[bands]; 
-float angle= 10;
+float angle=  -QUARTER_PI*3;
 
 void setup()
 {
@@ -27,4 +27,9 @@ void draw() {
     point(i,i);
     }
   angle += PI/(256*4)*0.1605; 
+   
+  if( angle >= QUARTER_PI*5){
+    background(0);
+    angle = -QUARTER_PI*3;
+  }
 }
