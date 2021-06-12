@@ -60,7 +60,7 @@ SynthDef(\reverb,{
 	\atk, Pwhite(2.0, 3.0, inf),
 	\rel, Pwhite(5.0, 3.0, inf),
 	\atk, Pwhite(2.0, 3.0, inf),
-	\amp, Pkey(\harmonic),
+	\amp, Pkey(\harmonic)*0.5,
 	\pan, Pwhite(-0.8, 0.8, inf),
 	\out, ~reverbBus
 ).play;
