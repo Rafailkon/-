@@ -22,4 +22,4 @@
 
 
 
-### [Video](https://1drv.ms/v/s!AjVIyz1h0tNBhkLIDxcqg5VnSngE?e=UMex2T)
+### [Video](https://1drv.ms/v/s!AjVIyz1h0tNBhkLIDxcqg5VnSngE)
